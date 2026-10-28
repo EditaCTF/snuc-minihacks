@@ -23,7 +23,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "SNUC miniHacks 2026 - SNUC Coding Club",
+  title: "SNUC miniHacks 2026",
   description:
     "A beginner-friendly hackathon exclusively for 1st and 2nd years at Shiv Nadar University Chennai. Nov 2 & 6, 2026. ₹8,000 prize pool, judged by industry experts.",
 };

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- The loader's final frame (.loader-logo): purple at the bottom rising to
+       navy at the top, with the white CC at 64% of the tile's width. -->
+  <defs>
+    <linearGradient id="fill" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#a56eeb" />
+      <stop offset="0.43" stop-color="#6a55cc" />
+      <stop offset="1" stop-color="#0b2468" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="48" fill="url(#fill)" />
+  <g fill="#fff" transform="translate(100 100) scale(0.914) translate(-100 -100)">
+    <path d="M84 68.5H49V78.5H39V123H49V132.5H84V123H93V116.5H77V126H55V76H77V85H93V78.5H84V68.5Z" />
+    <path d="M151 68H116V78H106V122.5H116V132H151V122.5H160V116H144V125.5H122V75.5H144V84.5H160V78H151V68Z" />
+  </g>
+</svg>
