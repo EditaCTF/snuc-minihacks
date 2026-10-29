@@ -349,7 +349,6 @@ p {
   height: 600%;
   background: var(--sky-gradient);
   transform: translate3d(0, calc(var(--sky) * -83.3333%), 0);
-  will-change: transform;
 }
 
 .sky-stars {
@@ -712,8 +711,8 @@ p {
   opacity: 0;
   transform: translateY(24px);
   transition:
-    opacity 0.7s ease,
-    transform 0.7s ease;
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
 
 .reveal.revealed {
@@ -789,8 +788,10 @@ p {
   padding: 24px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
+  /* Flat fill, no backdrop-filter: blurring the backdrop of a card that
+     itself animates in forces a per-frame backdrop re-snapshot, which macOS
+     composites asynchronously and shows up as half-painted cards. */
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .countdown-box .number {
@@ -830,8 +831,7 @@ p {
   padding: 26px 28px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .detail-card .big {
@@ -955,8 +955,7 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 24px;
   /* Navy tint so white text holds up against the pale dawn sky. */
-  background: rgba(11, 36, 104, 0.3);
-  backdrop-filter: blur(8px);
+  background: rgba(11, 36, 104, 0.45);
   text-align: center;
 }
 
@@ -1034,8 +1033,7 @@ p {
   gap: 8px 32px;
   padding: 26px 32px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 12px 32px rgba(60, 50, 140, 0.12);
 }
 
@@ -1066,8 +1064,7 @@ p {
 
 .faq-item {
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .faq-question {

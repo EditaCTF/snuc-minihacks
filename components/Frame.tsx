@@ -78,7 +78,10 @@ export default function Frame({ children }: { children: ReactNode }) {
           }
         }
       },
-      { root: scroller, threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+      // The positive bottom margin fires the reveal ~200px before the element
+      // enters the viewport, so the transition finishes off-camera instead of
+      // running in front of the user mid-scroll.
+      { root: scroller, threshold: 0, rootMargin: "0px 0px 200px 0px" },
     );
     for (const el of scroller.querySelectorAll(".reveal")) obs.observe(el);
 
